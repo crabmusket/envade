@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/eightyeight/envade#readme",
   "dependencies": {
+    "cross-spawn": "^2.0.0",
     "extend": "^3.0.0"
   }
 }

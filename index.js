@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var spawn = require('child_process').spawn;
+var spawn = require('cross-spawn');
 var extend = require('extend');
 
 var args = process.argv.slice(2);
