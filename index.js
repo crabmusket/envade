@@ -30,7 +30,15 @@ envs.forEach(function (envSet) {
   env[parts[0]] = parts[1];
 });
 
-spawn(command[0], command.slice(1), {
+var child = spawn(command[0], command.slice(1), {
   env: extend({}, process.env, env),
   stdio: 'inherit',
+});
+
+child.on('exit', function (code) {
+  process.exit(code);
+});
+
+child.on('error', function () {
+  process.exit(1);
 });
